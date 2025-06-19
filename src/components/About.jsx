@@ -15,19 +15,22 @@ const About = () => {
             <h2 className="heading-secondary mb-6 text-gradient">About Me</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                Saya adalah seorang Web Developer dengan passion dalam menciptakan 
-                solusi digital yang inovatif dan user-friendly. Dengan pengalaman 
-                lebih dari 1 tahun dalam industri teknologi.
+                Saya adalah mahasiswa semester akhir yang memiliki passion mendalam 
+                dalam pengembangan web. Dengan pengalaman lebih dari 1 tahun di 
+                industri teknologi, saya terus mengasah kemampuan untuk menciptakan 
+                solusi digital yang inovatif dan user-friendly.
               </p>
               <p>
                 Fokus utama saya adalah pengembangan aplikasi web modern menggunakan 
-                teknologi terdepan seperti React, Node.js, dan Laravel. Saya selalu 
-                berusaha untuk menghasilkan kode yang clean, scalable, dan maintainable.
+                teknologi terdepan seperti React, Node.js, dan Laravel. Sebagai 
+                mahasiswa yang aktif, saya selalu berusaha menghasilkan kode yang 
+                clean, scalable, dan mudah dipelihara.
               </p>
               <p>
-                Selain technical skills, saya juga memiliki eye for design yang memungkinkan 
-                saya untuk menciptakan interface yang tidak hanya fungsional, tapi juga 
-                aesthetically pleasing.
+                Selain kemampuan teknis, saya juga memiliki kepekaan terhadap desain 
+                yang memungkinkan saya menciptakan interface yang tidak hanya fungsional, 
+                tetapi juga menarik secara visual dan memberikan pengalaman pengguna 
+                yang optimal.
               </p>
             </div>
             <motion.div
