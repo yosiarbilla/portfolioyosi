@@ -31,7 +31,7 @@ const Projects = () => {
       description: "HealthSafe is a web-based medical record system developed for a clinic in Setiabudi, Bandung. Built with Laravel and MySQL, it streamlines patient data management, visit history, and diagnosis records in one clean and secure interface. Features include multi-user access, dynamic form generation, and exportable reports. Helping healthcare staff stay organized, one click at a time.",
       tech: ["Bootstrap", "Laravel", "MySQL"],
       image: "/healthsafe.jpg",
-      liveUrl: "https://your-portfolio.com",
+      liveUrl: "",
       githubUrl: "https://github.com/yourusername/portfolio",
       linkType: "github"
     },
@@ -51,8 +51,17 @@ const Projects = () => {
       description: "Simple car rental application designed for efficient vehicle booking and management. Built with React and Node.js, it features user authentication, car availability tracking, and booking history — providing a smooth experience for both users and admins.",
       tech: ["React", "Node.js", "MongoDB"],
       image: "/rentalcar.jpg",
-      liveUrl: "https://your-project2-demo.com",
+      liveUrl: "",
       githubUrl: "https://github.com/yosiarbilla/rentalcarprojectyosi",
+      linkType: "github"
+    },{
+      id: 6,
+      title: "The Room 19 Reservation",
+      description: "Seat reservation web application for streamlined booking and admin management. Built with Laravel 12, ReactJS, Inertia.js, and MySQL, featuring interactive seat selection, real-time availability, and an admin dashboard for confirmation and monitoring.",
+      tech: ["ReactJs", "Laravel 12", "MySQL", "Inertia.js"],
+      image: "/theroom19rsvp.png",
+      liveUrl: "https://theroom19rsvp.site",
+      githubUrl: "https://github.com/yosiarbilla/laravelbooking12",
       linkType: "github"
     },
   ];
@@ -106,72 +115,107 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="card group"
+              className="group relative"
             >
-              <div className="relative overflow-hidden rounded-lg mb-6">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
+              {/* Modern Card with Gradient Border */}
+              <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                {/* Gradient Border */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
-                <div className="w-full h-48 bg-gradient-to-br from-dark-700 to-dark-600 flex items-center justify-center" style={{ display: 'none' }}>
-                  <div className="text-gray-500 text-center">
-                    <div className="w-16 h-16 bg-dark-600 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
+                {/* Card Content */}
+                <div className="relative bg-dark-800 rounded-2xl p-6 h-full flex flex-col">
+                  {/* Image Container with Modern Effects */}
+                  <div className="relative overflow-hidden rounded-xl mb-6 group/image">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    
+                    {/* Fallback Image */}
+                    <div className="w-full h-48 bg-gradient-to-br from-dark-700 via-dark-600 to-dark-700 flex items-center justify-center" style={{ display: 'none' }}>
+                      <div className="text-gray-500 text-center">
+                        <div className="w-16 h-16 bg-gradient-to-br from-dark-600 to-dark-500 rounded-xl mx-auto mb-2 flex items-center justify-center shadow-lg">
+                          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <p className="text-sm font-medium">Add {project.image} to public folder</p>
+                      </div>
                     </div>
-                    <p className="text-sm">Add {project.image} to public folder</p>
+
+                    {/* Interactive Overlay */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center space-x-4">
+                      <motion.a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 bg-white/90 text-black rounded-full hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg"
+                        title="View Live Demo"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FiExternalLink size={20} />
+                      </motion.a>
+                      <motion.a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-lg ${
+                          project.linkType === 'figma' 
+                            ? 'bg-purple-500/90 text-white hover:bg-purple-600' 
+                            : 'bg-dark-800/90 text-white hover:bg-dark-700'
+                        }`}
+                        title={project.linkType === 'figma' ? 'View Design' : 'View Source Code'}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        {project.linkType === 'figma' ? (
+                          <SiFigma size={20} />
+                        ) : (
+                          <FiGithub size={20} />
+                        )}
+                      </motion.a>
+                    </div>
                   </div>
-                </div>
 
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <a 
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform duration-300"
-                    title="View Live Demo"
-                  >
-                    <FiExternalLink size={20} />
-                  </a>
-                  <a 
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 rounded-full hover:scale-110 transition-transform duration-300 ${
-                      project.linkType === 'figma' 
-                        ? 'bg-purple-600 text-white hover:bg-purple-700' 
-                        : 'bg-dark-800 text-white hover:bg-gray-700'
-                    }`}
-                    title={project.linkType === 'figma' ? 'View Design' : 'View Source Code'}
-                  >
-                    {project.linkType === 'figma' ? (
-                      <SiFigma size={20} />
-                    ) : (
-                      <FiGithub size={20} />
-                    )}
-                  </a>
-                </div>
-              </div>
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-gray-400 mb-6 leading-relaxed flex-1 text-sm">
+                      {project.description}
+                    </p>
+                    
+                    {/* Modern Tech Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, index) => (
+                        <motion.span 
+                          key={index}
+                          className="px-3 py-1.5 bg-gradient-to-r from-dark-700 to-dark-600 text-gray-300 text-xs font-medium rounded-full border border-dark-500 hover:border-gray-400 hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-600 transition-all duration-300 cursor-default"
+                          whileHover={{ scale: 1.05 }}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
 
-              <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
-              
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech, index) => (
-                  <span 
-                    key={index}
-                    className="px-3 py-1 bg-dark-700 text-gray-300 text-sm rounded-full border border-dark-600"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                </div>
               </div>
             </motion.div>
           ))}

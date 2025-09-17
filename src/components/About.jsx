@@ -15,22 +15,19 @@ const About = () => {
             <h2 className="heading-secondary mb-6 text-gradient">About Me</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                Saya adalah mahasiswa semester akhir yang memiliki passion mendalam 
-                dalam pengembangan web. Dengan pengalaman lebih dari 1 tahun di 
-                industri teknologi, saya terus mengasah kemampuan untuk menciptakan 
-                solusi digital yang inovatif dan user-friendly.
+                I am a recent graduate with a deep passion for web development. 
+                With over a year of experience in the tech industry, I continuously 
+                sharpen my skills to build innovative and user-friendly digital solutions.
               </p>
               <p>
-                Fokus utama saya adalah pengembangan aplikasi web modern menggunakan 
-                teknologi terdepan seperti React, Node.js, dan Laravel. Sebagai 
-                mahasiswa yang aktif, saya selalu berusaha menghasilkan kode yang 
-                clean, scalable, dan mudah dipelihara.
+                My main focus is developing modern web applications using cutting-edge 
+                technologies such as React, Node.js, and Laravel. As an active learner, 
+                I strive to produce clean, scalable, and maintainable code.
               </p>
               <p>
-                Selain kemampuan teknis, saya juga memiliki kepekaan terhadap desain 
-                yang memungkinkan saya menciptakan interface yang tidak hanya fungsional, 
-                tetapi juga menarik secara visual dan memberikan pengalaman pengguna 
-                yang optimal.
+                Beyond technical expertise, I also have a strong sense of design, 
+                enabling me to create interfaces that are not only functional but also 
+                visually appealing and optimized for an excellent user experience.
               </p>
             </div>
             <motion.div

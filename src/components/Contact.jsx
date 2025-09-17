@@ -168,17 +168,6 @@ const Contact = () => {
                     ))}
                   </div>
                 </div>
-
-                <motion.a
-                  href="mailto:yosi.pratama@email.com"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="btn-primary w-full text-center block"
-                >
-                  Start a Conversation
-                </motion.a>
               </div>
             </motion.div>
           </div>
