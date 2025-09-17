@@ -63,13 +63,30 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="heading-secondary mb-4 text-gradient">Get In Touch</h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="heading-secondary mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              Get In Touch
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full mb-8"></div>
+          </motion.div>
+          
+          <motion.p 
+            className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             Have a project in mind or want to collaborate? I'm always open to 
             discussing new opportunities and interesting projects.
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -80,53 +97,93 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="relative"
             >
-              <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                {contactInfo.map((contact, index) => {
-                  const IconComponent = contact.icon;
-                  return (
-                    <motion.a
-                      key={index}
-                      href={contact.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variants={itemVariants}
-                      className={`flex items-center space-x-4 p-4 rounded-lg bg-dark-800 border border-dark-600 hover:border-gray-500 transition-all duration-300 group ${contact.color}`}
-                    >
-                      <div className="flex-shrink-0">
-                        <IconComponent size={24} className="text-gray-400 group-hover:text-current transition-colors duration-300" />
-                      </div>
-                      <div>
-                        <p className="text-gray-400 text-sm">{contact.label}</p>
-                        <p className="text-white group-hover:text-current transition-colors duration-300">
-                          {contact.value}
-                        </p>
-                      </div>
-                    </motion.a>
-                  );
-                })}
-
-                <motion.div
-                  variants={itemVariants}
-                  className="flex items-center space-x-4 p-4 rounded-lg bg-dark-800 border border-dark-600"
+              <div className="relative">
+                <motion.h3 
+                  className="text-2xl font-bold text-white mb-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
                 >
-                  <div className="flex-shrink-0">
-                    <FiMapPin size={24} className="text-gray-400" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">Bandung, Indonesia</p>
-                  </div>
+                  Let's Connect
+                </motion.h3>
+                
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="space-y-4"
+                >
+                  {contactInfo.map((contact, index) => {
+                    const IconComponent = contact.icon;
+                    return (
+                      <motion.a
+                        key={index}
+                        href={contact.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variants={itemVariants}
+                        className="group relative block"
+                      >
+                        {/* Modern Card with Gradient Border */}
+                        <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                          {/* Gradient Border */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                          
+                          {/* Card Content */}
+                          <div className="relative bg-dark-800 rounded-2xl p-6 flex items-center space-x-4">
+                            {/* Icon with Glow Effect */}
+                            <div className="flex-shrink-0 relative">
+                              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                              <IconComponent 
+                                size={28} 
+                                className="relative text-gray-400 group-hover:text-white transition-all duration-300 group-hover:scale-110" 
+                              />
+                            </div>
+                            
+                            {/* Content */}
+                            <div className="flex-1">
+                              <p className="text-gray-400 text-sm font-medium mb-1">{contact.label}</p>
+                              <p className="text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300 font-semibold">
+                                {contact.value}
+                              </p>
+                            </div>
+                            
+                            {/* Hover Indicator */}
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.a>
+                    );
+                  })}
+
+                  {/* Location Card */}
+                  <motion.div
+                    variants={itemVariants}
+                    className="group relative block"
+                  >
+                    <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-xl">
+                      <div className="relative bg-dark-800 rounded-2xl p-6 flex items-center space-x-4">
+                        <div className="flex-shrink-0">
+                          <FiMapPin size={28} className="text-gray-400" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-gray-400 text-sm font-medium mb-1">Location</p>
+                          <p className="text-white font-semibold">Bandung, Indonesia</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* Call to Action */}
@@ -137,35 +194,72 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:pl-8"
             >
-              <div className="card">
-                <h3 className="text-xl font-bold text-white mb-6">Ready to Work Together?</h3>
-                
-                <div className="space-y-4 mb-8">
-                  <p className="text-gray-300 leading-relaxed">
-                    I'm currently available for freelance projects and full-time opportunities. 
-                    Whether you need a complete web application or want to collaborate on an 
-                    existing project, I'd love to hear from you.
-                  </p>
+              <div className="group relative">
+                {/* Modern Card with Gradient Border */}
+                <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                  {/* Gradient Border */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                   
-                  <div className="space-y-3">
-                    {[
-                      "📱 Web & Mobile Applications",
-                      "🎨 UI/UX Design Implementation", 
-                      "⚡ Performance Optimization",
-                      "🔧 Technical Consulting"
-                    ].map((service, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  {/* Card Content */}
+                  <div className="relative bg-dark-800 rounded-2xl p-8">
+                    <motion.h3 
+                      className="text-2xl font-bold text-white mb-8 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+                      Ready to Work Together?
+                    </motion.h3>
+                    
+                    <div className="space-y-6 mb-10">
+                      <motion.p 
+                        className="text-gray-300 leading-relaxed text-lg"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="flex items-center text-gray-300"
                       >
-                        <span className="mr-3">{service.split(' ')[0]}</span>
-                        <span>{service.split(' ').slice(1).join(' ')}</span>
-                      </motion.div>
-                    ))}
+                        I'm currently available for freelance projects and full-time opportunities. 
+                        Whether you need a complete web application or want to collaborate on an 
+                        existing project, I'd love to hear from you.
+                      </motion.p>
+                      
+                      <div className="space-y-4">
+                        {[
+                          { icon: "📱", text: "Web & Mobile Applications" },
+                          { icon: "🎨", text: "UI/UX Design Implementation" },
+                          { icon: "⚡", text: "Performance Optimization" },
+                          { icon: "🔧", text: "Technical Consulting" }
+                        ].map((service, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="group/item flex items-center p-3 rounded-xl bg-gradient-to-r from-dark-700/50 to-dark-600/50 hover:from-blue-600/20 hover:to-purple-600/20 transition-all duration-300 border border-dark-600 hover:border-blue-400/50"
+                          >
+                            <span className="text-2xl mr-4 group-hover/item:scale-110 transition-transform duration-300">{service.icon}</span>
+                            <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300 font-medium">{service.text}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Enhanced CTA Button */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.6 }}
+                      viewport={{ once: true }}
+                    >
+            
+                    </motion.div>
+
+                    {/* Decorative Elements */}
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   </div>
                 </div>
               </div>
@@ -173,17 +267,38 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Enhanced Footer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="text-center mt-20 pt-8 border-t border-dark-600"
+          className="text-center mt-24 pt-12"
         >
-          <p className="text-gray-500">
-            © 2024 Yosi Arbilla.
-          </p>
+          <div className="relative">
+            {/* Gradient Line */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+            
+            <motion.p 
+              className="text-gray-500 text-lg font-medium mt-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              © 2024 Yosi Arbilla
+            </motion.p>
+            
+            <motion.p 
+              className="text-gray-600 text-sm mt-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Let's create something amazing together!
+            </motion.p>
+          </div>
         </motion.div>
       </div>
     </section>
