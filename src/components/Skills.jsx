@@ -4,7 +4,6 @@ import {
   SiReact, 
   SiNextdotjs,
   SiJavascript, 
-  SiTypescript, 
   SiNodedotjs, 
   SiLaravel, 
   SiPhp, 
@@ -12,10 +11,6 @@ import {
   SiMongodb, 
   SiTailwindcss, 
   SiBootstrap,
-  SiGit, 
-  SiDocker, 
-  SiFigma,
-  SiInertia
 } from 'react-icons/si';
 
 const Skills = () => {
