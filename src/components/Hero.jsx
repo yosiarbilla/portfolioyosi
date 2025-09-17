@@ -226,90 +226,165 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Profile Photo */}
+          {/* Profile Photo with Modern Effects */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-8"
+            className="mb-12 relative inline-block"
           >
-            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gray-600 shadow-2xl">
-              <img 
-                src="/yosi.jpg" 
-                alt="Yosi Arbilla"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div className="w-full h-full bg-dark-700 flex items-center justify-center" style={{ display: 'none' }}>
-                <svg className="w-16 h-16 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+            {/* Glow Effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 animate-pulse blur-xl scale-110"></div>
+            
+            {/* Profile Container */}
+            <div className="relative">
+              {/* Gradient Border */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1">
+                <div className="w-full h-full rounded-full bg-dark-900"></div>
+              </div>
+              
+              {/* Profile Image */}
+              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-2xl">
+                <img 
+                  src="/yosi.jpg" 
+                  alt="Yosi Arbilla"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="w-full h-full bg-gradient-to-br from-dark-700 to-dark-600 flex items-center justify-center" style={{ display: 'none' }}>
+                  <svg className="w-20 h-20 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                  </svg>
+                </div>
               </div>
             </div>
           </motion.div>
 
+          {/* Name with Enhanced Typography */}
           <motion.h1 
-            className="heading-primary text-gradient mb-6"
+            className="heading-primary mb-6 relative"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Yosi Arbilla
+            <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              Yosi Arbilla
+            </span>
+            {/* Decorative Line */}
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
           </motion.h1>
           
+          {/* Enhanced Description */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-8"
+            className="mb-12"
           >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-4 font-medium">
-              Web Developer
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Crafting modern digital experiences with clean code and innovative design. Specialized in React, Laravel, and full-stack development. Also a part-time guitar hero and full-time Beatles enthusiast — let it code, let it be! 🎸💻✨
-            </p>
+            <motion.h2 
+              className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 mb-6 font-bold"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Web Developer
+              </span>
+            </motion.h2>
+            
+            <div className="max-w-3xl mx-auto">
+              <p className="text-gray-400 text-lg leading-relaxed mb-4">
+                Crafting modern digital experiences with clean code and innovative design. 
+                Specialized in React, Laravel, and full-stack development.
+              </p>
+              <p className="text-gray-500 text-base leading-relaxed">
+                Also a part-time guitar hero and full-time Beatles enthusiast — 
+                <span className="text-purple-400 font-medium"> let it code, let it be!</span> 🎸💻✨
+              </p>
+            </div>
           </motion.div>
 
+          {/* Enhanced Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <button 
+            <motion.button 
               onClick={scrollToProjects}
-              className="btn-primary group"
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span className="mr-2">View Work</span>
-              <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-            </button>
+              {/* Button Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              
+              {/* Button Content */}
+              <div className="relative flex items-center">
+                <span className="mr-3">View Work</span>
+                <motion.span 
+                  className="inline-block"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  →
+                </motion.span>
+              </div>
+            </motion.button>
             
-            <button 
+            <motion.button 
               onClick={scrollToContact}
-              className="btn-secondary"
+              className="group relative px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-xl hover:border-white hover:bg-white hover:text-black transition-all duration-300 overflow-hidden"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Contact Me
-            </button>
+              {/* Hover Background */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Button Content */}
+              <span className="relative">Contact Me</span>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Mouse Scroll Indicator - Fixed Position */}
+      {/* Enhanced Mouse Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
-        <div className="animate-bounce cursor-pointer" onClick={scrollToProjects}>
-          <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center hover:border-white transition-colors duration-300">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        <motion.div 
+          className="cursor-pointer group"
+          onClick={scrollToProjects}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          {/* Glow Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm scale-110"></div>
+          
+          {/* Scroll Indicator */}
+          <div className="relative w-8 h-12 border-2 border-gray-600 rounded-full flex justify-center items-start pt-2 group-hover:border-white transition-colors duration-300">
+            <motion.div 
+              className="w-1 h-4 bg-gradient-to-b from-white to-gray-400 rounded-full"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            />
           </div>
-        </div>
+          
+          {/* Scroll Text */}
+          <motion.p 
+            className="text-gray-500 text-xs mt-2 text-center group-hover:text-white transition-colors duration-300"
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            Scroll
+          </motion.p>
+        </motion.div>
       </motion.div>
     </section>
   );
