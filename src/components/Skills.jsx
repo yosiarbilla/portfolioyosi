@@ -70,7 +70,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 section-padding bg-dark-800">
+    <section id="skills" className="py-20 section-padding bg-[#FFFFF0]">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -79,8 +79,8 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-secondary mb-4 text-gradient">Skills & Technologies</h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <h2 className="heading-secondary mb-4 text-[#EF7722]">Skills & Technologies</h2>
+          <p className="text-[#A64F12] text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life. Always learning and 
             exploring new technologies to stay current with industry trends.
           </p>
@@ -97,18 +97,18 @@ const Skills = () => {
               className="group relative"
             >
               {/* Modern Card with Gradient Border */}
-              <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+              <div className="relative bg-[#FFFFF0] rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#EF7722]">
                 {/* Gradient Border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                <div className="absolute inset-0 bg-[#EF7722] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
                 {/* Card Content */}
-                <div className="relative bg-dark-800 rounded-2xl p-6 h-full">
+                <div className="relative bg-[#FFFFF0] rounded-2xl p-6 h-full">
                   {/* Category Header */}
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                    <h3 className="text-xl font-bold text-[#EF7722] transition-all duration-300">
                       {category.title}
                     </h3>
-                    <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="w-12 h-1 bg-[#EF7722] mx-auto mt-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   
                   <motion.div
@@ -126,7 +126,7 @@ const Skills = () => {
                           variants={itemVariants}
                           className="group/skill relative"
                         >
-                          <div className="flex items-center space-x-3 p-4 rounded-xl bg-gradient-to-r from-dark-700/50 to-dark-600/50 hover:from-dark-600 hover:to-dark-500 transition-all duration-300 border border-dark-600 hover:border-gray-500 hover:shadow-lg cursor-pointer">
+                          <div className="flex items-center space-x-3 p-4 rounded-xl bg-[#EF7722]/5 hover:bg-[#EF7722]/10 transition-all duration-300 border border-[#EF7722]/40 hover:border-[#EF7722] hover:shadow-lg cursor-pointer">
                             {/* Icon with Glow Effect */}
                             <div className="flex-shrink-0 relative">
                               <div className="absolute inset-0 rounded-full opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300 blur-sm"
@@ -139,13 +139,13 @@ const Skills = () => {
                             </div>
                             
                             {/* Skill Name */}
-                            <span className="text-gray-300 group-hover/skill:text-white transition-colors duration-300 font-medium">
+                            <span className="text-[#A64F12] transition-colors duration-300 font-medium">
                               {skill.name}
                             </span>
                             
                             {/* Hover Indicator */}
                             <div className="ml-auto opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300">
-                              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                              <div className="w-2 h-2 rounded-full bg-[#EF7722]"></div>
                             </div>
                           </div>
                         </motion.div>
@@ -154,8 +154,8 @@ const Skills = () => {
                   </motion.div>
 
                   {/* Decorative Elements */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 </div>
               </div>
             </motion.div>
@@ -177,10 +177,10 @@ const Skills = () => {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold text-[#EF7722] mb-4">
                 What I Bring to the Table
               </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-[#EF7722] mx-auto rounded-full"></div>
             </motion.div>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -213,30 +213,30 @@ const Skills = () => {
                   className="group relative"
                 >
                   {/* Modern Card with Gradient Border */}
-                  <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                  <div className="relative bg-[#FFFFF0] rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#EF7722]">
                     {/* Gradient Border */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`}></div>
+                    <div className={`absolute inset-0 bg-[#EF7722] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`}></div>
                     
                     {/* Card Content */}
-                    <div className="relative bg-dark-800 rounded-2xl p-8 h-full text-center">
+                    <div className="relative bg-[#FFFFF0] rounded-2xl p-8 h-full text-center">
                       {/* Icon */}
                       <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                         {item.icon}
                       </div>
                       
                       {/* Title */}
-                      <h4 className="font-bold text-white mb-4 text-lg group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                      <h4 className="font-bold text-[#EF7722] mb-4 text-lg transition-all duration-300">
                         {item.title}
                       </h4>
                       
                       {/* Description */}
-                      <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                      <p className="text-[#A64F12] text-sm leading-relaxed transition-colors duration-300">
                         {item.description}
                       </p>
                       
                       {/* Decorative Elements */}
-                      <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute top-4 right-4 w-2 h-2 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute bottom-4 left-4 w-1 h-1 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
                   </div>
                 </motion.div>

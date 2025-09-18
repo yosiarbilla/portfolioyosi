@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 section-padding bg-dark-900">
+    <section id="contact" className="py-20 section-padding bg-[#FFFFF0]">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,14 +71,14 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="heading-secondary mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            <h2 className="heading-secondary mb-6 text-[#EF7722]">
               Get In Touch
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full mb-8"></div>
+            <div className="w-24 h-1 bg-[#EF7722] mx-auto rounded-full mb-8"></div>
           </motion.div>
           
           <motion.p 
-            className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed"
+            className="text-[#A64F12] text-lg max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -100,11 +100,11 @@ const Contact = () => {
               className="relative"
             >
               {/* Background Glow Effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-4 bg-[#EF7722]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative">
                 <motion.h3 
-                  className="text-2xl font-bold text-white mb-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  className="text-2xl font-bold text-[#EF7722] mb-10"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
@@ -132,32 +132,32 @@ const Contact = () => {
                         className="group relative block"
                       >
                         {/* Modern Card with Gradient Border */}
-                        <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                        <div className="relative bg-[#FFFFF0] rounded-2xl p-1 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-[#EF7722]">
                           {/* Gradient Border */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                          <div className="absolute inset-0 bg-[#EF7722] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                           
                           {/* Card Content */}
-                          <div className="relative bg-dark-800 rounded-2xl p-6 flex items-center space-x-4">
+                          <div className="relative bg-[#FFFFF0] rounded-2xl p-6 flex items-center space-x-4">
                             {/* Icon with Glow Effect */}
                             <div className="flex-shrink-0 relative">
-                              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                              <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm bg-[#EF7722]"></div>
                               <IconComponent 
                                 size={28} 
-                                className="relative text-gray-400 group-hover:text-white transition-all duration-300 group-hover:scale-110" 
+                                className="relative text-[#A64F12] group-hover:text-[#EF7722] transition-all duration-300 group-hover:scale-110" 
                               />
                             </div>
                             
                             {/* Content */}
                             <div className="flex-1">
-                              <p className="text-gray-400 text-sm font-medium mb-1">{contact.label}</p>
-                              <p className="text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300 font-semibold">
+                              <p className="text-[#A64F12] text-sm font-medium mb-1">{contact.label}</p>
+                              <p className="text-[#EF7722] transition-all duration-300 font-semibold">
                                 {contact.value}
                               </p>
                             </div>
                             
                             {/* Hover Indicator */}
                             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
+                              <div className="w-2 h-2 rounded-full bg-[#EF7722]"></div>
                             </div>
                           </div>
                         </div>
@@ -171,13 +171,13 @@ const Contact = () => {
                     className="group relative block"
                   >
                     <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-xl">
-                      <div className="relative bg-dark-800 rounded-2xl p-6 flex items-center space-x-4">
+                    <div className="relative bg-[#FFFFF0] rounded-2xl p-6 flex items-center space-x-4">
                         <div className="flex-shrink-0">
-                          <FiMapPin size={28} className="text-gray-400" />
+                          <FiMapPin size={28} className="text-[#EF7722]" />
                         </div>
                         <div className="flex-1">
-                          <p className="text-gray-400 text-sm font-medium mb-1">Location</p>
-                          <p className="text-white font-semibold">Bandung, Indonesia</p>
+                          <p className="text-[#A64F12] text-sm font-medium mb-1">Location</p>
+                          <p className="text-[#EF7722] font-semibold">Bandung, Indonesia</p>
                         </div>
                       </div>
                     </div>
@@ -196,14 +196,14 @@ const Contact = () => {
             >
               <div className="group relative">
                 {/* Modern Card with Gradient Border */}
-                <div className="relative bg-gradient-to-br from-dark-800 via-dark-700 to-dark-800 rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                <div className="relative bg-[#FFFFF0] rounded-2xl p-1 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#EF7722]">
                   {/* Gradient Border */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                  <div className="absolute inset-0 bg-[#EF7722] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                   
                   {/* Card Content */}
-                  <div className="relative bg-dark-800 rounded-2xl p-8">
+                  <div className="relative bg-[#FFFFF0] rounded-2xl p-8">
                     <motion.h3 
-                      className="text-2xl font-bold text-white mb-8 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300"
+                      className="text-2xl font-bold text-[#EF7722] mb-8 transition-all duration-300"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
@@ -214,7 +214,7 @@ const Contact = () => {
                     
                     <div className="space-y-6 mb-10">
                       <motion.p 
-                        className="text-gray-300 leading-relaxed text-lg"
+                        className="text-[#A64F12] leading-relaxed text-lg"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
@@ -238,10 +238,10 @@ const Contact = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group/item flex items-center p-3 rounded-xl bg-gradient-to-r from-dark-700/50 to-dark-600/50 hover:from-blue-600/20 hover:to-purple-600/20 transition-all duration-300 border border-dark-600 hover:border-blue-400/50"
+                            className="group/item flex items-center p-3 rounded-xl bg-[#EF7722]/5 hover:bg-[#EF7722]/10 transition-all duration-300 border border-[#EF7722]/40 hover:border-[#EF7722]"
                           >
                             <span className="text-2xl mr-4 group-hover/item:scale-110 transition-transform duration-300">{service.icon}</span>
-                            <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300 font-medium">{service.text}</span>
+                            <span className="text-[#A64F12] transition-colors duration-300 font-medium">{service.text}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -258,8 +258,8 @@ const Contact = () => {
                     </motion.div>
 
                     {/* Decorative Elements */}
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   </div>
                 </div>
               </div>
@@ -277,10 +277,10 @@ const Contact = () => {
         >
           <div className="relative">
             {/* Gradient Line */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-[#EF7722] rounded-full"></div>
             
             <motion.p 
-              className="text-gray-500 text-lg font-medium mt-6"
+              className="text-[#A64F12] text-lg font-medium mt-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -290,7 +290,7 @@ const Contact = () => {
             </motion.p>
             
             <motion.p 
-              className="text-gray-600 text-sm mt-2"
+              className="text-[#A64F12] text-sm mt-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}

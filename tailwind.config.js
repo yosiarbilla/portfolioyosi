@@ -11,15 +11,15 @@ module.exports = {
       },
       colors: {
         'dark': {
-          900: '#0a0a0a',
-          800: '#1a1a1a',
-          700: '#2a2a2a',
-          600: '#3a3a3a',
+          900: '#FFFFF0',
+          800: '#FFFFF0',
+          700: '#FFFFF0',
+          600: '#FFFFF0',
         },
         'accent': {
-          500: '#ffffff',
-          400: '#f5f5f5',
-          300: '#e5e5e5',
+          500: '#EF7722',
+          400: '#EF7722',
+          300: '#EF7722',
         }
       },
       animation: {

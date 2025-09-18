@@ -234,12 +234,12 @@ const Hero = () => {
             className="mb-12 relative inline-block"
           >
             {/* Glow Effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 animate-pulse blur-xl scale-110"></div>
+            <div className="absolute inset-0 rounded-full bg-[#EF7722] opacity-0 animate-pulse blur-xl scale-110"></div>
             
             {/* Profile Container */}
             <div className="relative">
               {/* Gradient Border */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1">
+              <div className="absolute inset-0 rounded-full bg-[#EF7722] p-1">
                 <div className="w-full h-full rounded-full bg-dark-900"></div>
               </div>
               
@@ -270,11 +270,11 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            <span className="text-[#EF7722]">
               Yosi Arbilla
             </span>
             {/* Decorative Line */}
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#EF7722] rounded-full"></div>
           </motion.h1>
           
           {/* Enhanced Description */}
@@ -289,19 +289,19 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="text-[#EF7722]">
                 Web Developer
               </span>
             </motion.h2>
             
             <div className="max-w-3xl mx-auto">
-              <p className="text-gray-400 text-lg leading-relaxed mb-4">
+              <p className="text-[#A64F12] text-lg leading-relaxed mb-4">
                 Crafting modern digital experiences with clean code and innovative design. 
                 Specialized in React, Laravel, and full-stack development.
               </p>
-              <p className="text-gray-500 text-base leading-relaxed">
+              <p className="text-[#A64F12] text-base leading-relaxed">
                 Also a part-time guitar hero and full-time Beatles enthusiast — 
-                <span className="text-purple-400 font-medium"> let it code, let it be!</span> 🎸💻✨
+                <span className="text-[#EF7722] font-medium"> let it code, let it be!</span> 🎸
               </p>
             </div>
           </motion.div>
@@ -315,12 +315,12 @@ const Hero = () => {
           >
             <motion.button 
               onClick={scrollToProjects}
-              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
+              className="group relative px-8 py-4 bg-[#EF7722] text-[#FFFFF0] font-semibold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               {/* Button Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <div className="absolute inset-0 bg-[#d96516] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
               
               {/* Button Content */}
               <div className="relative flex items-center">
@@ -337,12 +337,12 @@ const Hero = () => {
             
             <motion.button 
               onClick={scrollToContact}
-              className="group relative px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-xl hover:border-white hover:bg-white hover:text-black transition-all duration-300 overflow-hidden"
+              className="group relative px-8 py-4 border-2 border-[#EF7722] text-[#EF7722] font-semibold rounded-xl hover:bg-[#EF7722] hover:text-[#FFFFF0] transition-all duration-300 overflow-hidden"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               {/* Hover Background */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-[#EF7722] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               {/* Button Content */}
               <span className="relative">Contact Me</span>
@@ -356,7 +356,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div 
           className="cursor-pointer group"
@@ -365,12 +365,12 @@ const Hero = () => {
           whileTap={{ scale: 0.9 }}
         >
           {/* Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm scale-110"></div>
+          <div className="absolute inset-0 bg-[#EF7722] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm scale-110"></div>
           
           {/* Scroll Indicator */}
-          <div className="relative w-8 h-12 border-2 border-gray-600 rounded-full flex justify-center items-start pt-2 group-hover:border-white transition-colors duration-300">
+          <div className="relative w-8 h-12 border-2 border-[#EF7722] rounded-full flex justify-center items-start pt-2 transition-colors duration-300">
             <motion.div 
-              className="w-1 h-4 bg-gradient-to-b from-white to-gray-400 rounded-full"
+              className="w-1 h-4 bg-gradient-to-b from-[#EF7722] to-[#d96516] rounded-full"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -378,7 +378,7 @@ const Hero = () => {
           
           {/* Scroll Text */}
           <motion.p 
-            className="text-gray-500 text-xs mt-2 text-center group-hover:text-white transition-colors duration-300"
+            className="text-[#EF7722] text-xs mt-2 text-center"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
